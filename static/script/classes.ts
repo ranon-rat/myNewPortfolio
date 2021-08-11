@@ -113,3 +113,10 @@ export function textAnimation(
     );
   }
 }
+export interface project{
+  
+  description:string;
+  url:string;
+  image:string;
+  stars?:number;
+}
