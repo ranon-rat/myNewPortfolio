@@ -18,10 +18,10 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 	email := r.Form.Get("email")
 	subject := r.Form.Get("subject")
 	message := r.Form.Get("body")
-	webHookRequest(email, subject, message, r.RemoteAddr)
+	webHookRequest(email, subject, message)
 }
 
-func webHookRequest(email, subject, message, ip string) {
+func webHookRequest(email, subject, message string) {
 	params, _ := json.Marshal(types.Message{
 		Content: "new contact",
 		Embeds: []types.Embed{
@@ -43,10 +43,6 @@ func webHookRequest(email, subject, message, ip string) {
 					{
 						Name:  "date",
 						Value: "```" + time.Now().Format("2006-01-02 15:04:05") + "```",
-					},
-					{
-						Name:  "ip",
-						Value: "```" + ip + "```",
 					},
 				}},
 		}})
