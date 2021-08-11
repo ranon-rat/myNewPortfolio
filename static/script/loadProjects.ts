@@ -83,7 +83,7 @@ var projects: Record<string, classes.project> = {
 (async () => {
   let resp = await fetch("https://api.github.com/users/ranon-rat/repos?per_page=80");
   let repos = await resp.json();
-  var projectElement:HTMLElement=document.getElementById("projects") as HTMLElement;
+  var projectElement:HTMLElement=document.getElementById("projects-container") as HTMLElement;
 
   repos.forEach((repo: any) => {
     console.log(repo.name)

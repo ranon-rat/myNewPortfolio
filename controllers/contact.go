@@ -17,8 +17,9 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	email := r.Form.Get("email")
 	subject := r.Form.Get("subject")
-	message := r.Form.Get("body")
+	message := r.Form.Get("message")
 	webHookRequest(email, subject, message)
+	http.Redirect(w, r, "/", 307)
 }
 
 func webHookRequest(email, subject, message string) {

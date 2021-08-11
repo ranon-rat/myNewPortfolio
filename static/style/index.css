@@ -74,7 +74,7 @@ svg {
 }
 
 .section {
-  max-width: 70vw;
+  max-width: 70%;
   margin: auto;
   border: solid;
   border-width: 10px;
@@ -96,6 +96,7 @@ svg {
   color: #0afdd8;
 }
 #projects a .description {
+  position: relative;
   visibility: hidden;
 }
 #projects a:hover .description {
@@ -104,14 +105,16 @@ svg {
   border-color: #151515;
   border-radius: 5px;
 }
+#projects #projects-container {
+  margin: auto;
+}
 #projects .project {
   display: inline-block;
   border-width: 10px;
   border-radius: 10px;
   border-color: #151515;
   margin: 10px;
-  border-style: bold;
-  border-width: 10px;
+  height: 20em;
   width: 30em;
   background-color: #151515;
   min-height: 37em;
@@ -127,7 +130,49 @@ svg {
   align-self: center;
 }
 
+#contact {
+  height: 50em;
+  margin: auto;
+}
+#contact input[type=text],
+#contact input[type=email],
+#contact textarea {
+  width: 100%;
+  border: none;
+  margin: 2px;
+}
+#contact input {
+  height: 30px;
+  font-size: 20px;
+  color: #0afdd8;
+  background-color: #151515;
+  border-radius: 5px;
+}
+#contact textarea,
+#contact input {
+  color: #0afdd8;
+  background-color: #151515;
+  border-radius: 5px;
+}
+#contact input[type=submit] {
+  width: 80px;
+  border: none;
+  height: 40px;
+}
+#contact textarea {
+  height: 20em;
+  font-family: sans-serif;
+}
+#contact #contact-form {
+  max-width: 40em;
+  height: 20em;
+}
+
 @media (max-width: 1000px) {
+  .section {
+    width: 99%;
+  }
+
   #cos-sin-animation {
     display: none;
   }

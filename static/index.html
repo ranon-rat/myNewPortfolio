@@ -112,13 +112,27 @@
       <div class="separation"></div>
       <div>
       <div id="projects" class="section">
+
         <h1 class="title">Projects</h1>
         <!--projects-->
+        <div id="projects-container">
 
+        </div>
 
       </div>
       <script src="script/loadProjects.js?a" type="module"></script>
       <div>
+      <div class="separation"></div>
+        <div id="contact" class="section">
+          <h1 class="title">Contact</h1>
+          <form action="/contact" method="POST" id="contact-form">
+            <input type="email" name="email" placeholder="email" required>
+            <input type="text" name="subject" placeholder="subject" required>
+            <textarea name="message" placeholder="message" required></textarea>
+            <input type="submit" value="send">
+          </form>
+        </div>
+        <div class="separation"></div>
     </div>
     <footer align="center">
       © ranon-rat 2021

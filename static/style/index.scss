@@ -35,7 +35,7 @@ svg {
 #discord {
   fill: $svg-color;
 }
-//menu 
+//menu
 #menu {
   position: fixed;
   border-width: 10px;
@@ -85,7 +85,7 @@ svg {
   .animations-post {
     float: right;
   }
-  max-width: 70vw;
+  max-width: 70%;
 
   margin: auto;
   border: solid;
@@ -96,50 +96,93 @@ svg {
   background-color: $elements-color;
 }
 // projects
+
 #projects {
   a {
     color: $font-color;
-    .description{
+    .description {
+      position: relative;
       visibility: hidden;
     }
   }
-  a:hover{
-    .description{
+  a:hover {
+    .description {
       visibility: visible;
       border-width: 10px;
       border-color: $project-color;
       border-radius: 5px;
     }
   }
-
+  #projects-container {
+    margin: auto;
+  }
   .project {
     display: inline-block;
     border-width: 10px;
     border-radius: 10px;
     border-color: $project-color;
     margin: 10px;
-    border-style: bold;
-    border-width: 10px;
+
+    height: 20em;
     h1 {
       font-size: 30px;
       text-align: center;
     }
     img {
       height: 20em;
-      margin:auto;
-      display:block;
+      margin: auto;
+      display: block;
       align-self: center;
     }
     width: 30em;
     background-color: $project-color;
     min-height: 37em;
+  }
+}
+#contact {
+  height: 50em;
+  margin: auto;
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    border: none;
+    margin: 2px;
 
+  }
+  input {
+    height: 30px;
+    font-size: 20px;
+    color: $font-color;
+    background-color: $project-color;
+    border-radius: 5px;
+  }
+  textarea,
+  input {
+    color: $font-color;
+    background-color: $project-color;
+    border-radius: 5px;
+  }
+  input[type="submit"] {
+    width: 80px;
+    border: none;
+    height: 40px;;
     
   }
-
+  textarea {
+    height: 20em;
+    font-family: sans-serif;
+  }
+  #contact-form {
+    max-width: 40em;
+    height: 20em;
+  }
 }
 // some reponsive that it doesnt work really well
 @media (max-width: 1000px) {
+  .section {
+    width: 99%;
+  }
   #cos-sin-animation {
     display: none;
   }
