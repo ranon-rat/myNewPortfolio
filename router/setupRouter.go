@@ -9,6 +9,7 @@ import (
 )
 
 func SetupRouter() {
+	
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/", fs)
 	http.HandleFunc("/contact", controllers.Contact)
