@@ -1,5 +1,7 @@
 $elements-color: #1d1d1d;
+$project-color: #151515;
 $font-color: #0afdd8;
+$svg-color: rgb(2, 44, 255);
 body {
   background-color: #000000;
   font-family: sans-serif;
@@ -19,14 +21,21 @@ a {
   font-weight: bold;
   text-decoration: none;
 }
+/*svg stuff*/
 svg {
   width: 30px;
-  stroke: rgb(2, 44, 255);
- 
+  stroke: $svg-color;
 }
-#discord{
-    fill: rgb(2, 44, 255);
+.star {
+  float: right;
+  svg {
+    fill: $svg-color;
+  }
 }
+#discord {
+  fill: $svg-color;
+}
+//menu 
 #menu {
   position: fixed;
   border-width: 10px;
@@ -38,24 +47,20 @@ svg {
   height: 100vh;
   width: 7em;
 
-  p{
-      left:10px;
+  p {
+    left: 10px;
     padding-top: 30px;
     overflow: none;
     list-style-type: none;
     text-align: left;
 
-
-      text-decoration: none;
-      font-weight: bold;
-      padding-top: 10px;
-  
-    
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 10px;
   }
-  #menu-header{
-      padding-top: 10px;
+  #menu-header {
+    padding-top: 10px;
   }
-
 
   a {
     color: $font-color;
@@ -70,7 +75,7 @@ svg {
   padding-top: 200px;
 }
 
-.section{
+.section {
   .title {
     font-size: 60px;
   }
@@ -90,58 +95,94 @@ svg {
 
   background-color: $elements-color;
 }
-
-
-@media  (max-width: 1000px)  {
-    #cos-sin-animation{
-        display:none;
-        
+// projects
+#projects {
+  a {
+    color: $font-color;
+    .description{
+      visibility: hidden;
     }
-    #thecnologies{
-        height: 100vh;
+  }
+  a:hover{
+    .description{
+      visibility: visible;
+      border-width: 10px;
+      border-color: $project-color;
+      border-radius: 5px;
     }
-    #menu {
-        
+  }
 
-        float:none;
-        position:fixed;
-       
-        top:0;
-        width:100%;
-        height: 60px;
-        p{
-            padding-bottom: 10px;
-            display:inline;
-            padding-right: 10px;
-            
-        }
-        svg{
-            
-            padding-bottom: 10px;   
-        }
-        div{
-            display:inline;
-        }
+  .project {
+    display: inline-block;
+    border-width: 10px;
+    border-radius: 10px;
+    border-color: $project-color;
+    margin: 10px;
+    border-style: bold;
+    border-width: 10px;
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+    img {
+      height: 20em;
+      margin:auto;
+      display:block;
+      align-self: center;
+    }
+    width: 30em;
+    background-color: $project-color;
+    min-height: 37em;
+
     
+  }
 
-        #menu-title{
-        
-            display:none;
+}
+// some reponsive that it doesnt work really well
+@media (max-width: 1000px) {
+  #cos-sin-animation {
+    display: none;
+  }
+  #thecnologies {
+    height: 100vh;
+  }
+  #menu {
+    float: none;
+    position: fixed;
 
-        }
+    top: 0;
+    width: 100%;
+    height: 60px;
+    p {
+      padding-bottom: 10px;
+      display: inline;
+      padding-right: 10px;
     }
+    svg {
+      padding-bottom: 10px;
+    }
+    div {
+      display: inline;
+    }
+
+    #menu-title {
+      display: none;
+    }
+  }
 }
 @media (max-width: 1000px) and (min-width: 800px) {
-    #menu-social-networks{
-        padding-left: 20em;
-    }
+  #menu-social-networks {
+    padding-left: 20em;
+  }
 }
 
-
-
-@media (max-width: 800px) {
-
-    #menu-social-networks{
-        padding-left: 10em;
-    }
+@media (max-width: 800px) and (min-width: 600px) {
+  #menu-social-networks {
+    padding-left: 10em;
+  }
+}
+@media (max-width: 600px) {
+  #menu-social-networks {
+    padding-left: 2em;
+  }
 }

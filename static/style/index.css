@@ -20,9 +20,17 @@ a {
   text-decoration: none;
 }
 
+/*svg stuff*/
 svg {
   width: 30px;
   stroke: #022cff;
+}
+
+.star {
+  float: right;
+}
+.star svg {
+  fill: #022cff;
 }
 
 #discord {
@@ -84,6 +92,41 @@ svg {
   float: right;
 }
 
+#projects a {
+  color: #0afdd8;
+}
+#projects a .description {
+  visibility: hidden;
+}
+#projects a:hover .description {
+  visibility: visible;
+  border-width: 10px;
+  border-color: #151515;
+  border-radius: 5px;
+}
+#projects .project {
+  display: inline-block;
+  border-width: 10px;
+  border-radius: 10px;
+  border-color: #151515;
+  margin: 10px;
+  border-style: bold;
+  border-width: 10px;
+  width: 30em;
+  background-color: #151515;
+  min-height: 37em;
+}
+#projects .project h1 {
+  font-size: 30px;
+  text-align: center;
+}
+#projects .project img {
+  height: 20em;
+  margin: auto;
+  display: block;
+  align-self: center;
+}
+
 @media (max-width: 1000px) {
   #cos-sin-animation {
     display: none;
@@ -120,9 +163,14 @@ svg {
     padding-left: 20em;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 800px) and (min-width: 600px) {
   #menu-social-networks {
     padding-left: 10em;
+  }
+}
+@media (max-width: 600px) {
+  #menu-social-networks {
+    padding-left: 2em;
   }
 }
 
