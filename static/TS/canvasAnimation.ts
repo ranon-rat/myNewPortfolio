@@ -14,7 +14,7 @@ canvas.addEventListener("mousemove", (e:any) => {
   mouse.y = e.clientY - rect.top;
 });
 
-ctx.fillStyle = "#000";
+ctx.fillStyle = "#121212";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 (async () => {
   const fet = await fetch("https://api.github.com/users/ranon-rat/repos");
@@ -29,7 +29,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
   });
 
   setInterval(async () => {
-    ctx.fillStyle = "#000";
+    ctx.fillStyle = "#121212";
 
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     particles.forEach(async (particle: classes.particles) => {

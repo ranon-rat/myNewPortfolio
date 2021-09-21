@@ -1,4 +1,5 @@
 import * as classes from "./classes.js";
+
 const projectsNames = [
   "anonpost",
   "blog_made_in_rust",
@@ -10,6 +11,7 @@ const projectsNames = [
   "neural-network-in-cpp",
   "blog in go",
 ];
+
 var projects: Record<string, classes.project> = {
   anonpost: {
     url: "https://github.com/bruh-boys/anonpost",
@@ -70,50 +72,37 @@ var projects: Record<string, classes.project> = {
       "https://camo.githubusercontent.com/96e9eb8fde3b741ed59c0632df306a059780cbf891e04d831db1d710320f7f07/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3738363735323838353938323632353836322f3739363433303930323736323031323732322f436170747572615f64655f50616e74616c6c615f323032312d30312d30365f615f6c61735f31312e33302e31385f612e6d2e2e706e67",
   },
 };
-/*
-<div class="project">
-    <h1></h1>
-    <img src="" width=400px>
-    <h2>description</h2>
-    <p></p>
-    <span class="stars"></span>
-    
-</div>
-*/
-(async () => {
+
+(async function main() {
   let resp = await fetch("https://api.github.com/users/ranon-rat/repos?per_page=80");
   let repos = await resp.json();
-  var projectElement:HTMLElement=document.getElementById("projects-container") as HTMLElement;
+  var projectElement: HTMLElement = document.getElementById("projects_container") as HTMLElement;
 
   repos.forEach((repo: any) => {
     console.log(repo.name)
+    
     if (projects.hasOwnProperty(repo.name)) {
-        projects[repo.name].stars = repo.stargazers_count;
-        projectElement.innerHTML += `
-        <a href="${projects[repo.name].url}">
-            <div class="project">
-                <h1>${repo.name}</h1>
-                <img src="${projects[repo.name].image}" width=400px>
-                <div class="description">
-                    <h2>description</h2>
-                    <p class="star"> 
-                        <svg aria-label="star" fill="rgb(2, 44, 255)" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star">
-                            <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
-                        </svg>
-                        ${repo.stargazers_count}
-                    </p>
+      projects[repo.name].stars = repo.stargazers_count;
 
-                    <p>${projects[repo.name].description}</p>
-                </div>
-            </div>
-                
-        </a>
-        `;
-   
-     
+      projectElement.innerHTML +=
+      `<div class="project_structure">
+      <div class="PS_header">
+        <div class="PS_head">
+          <h2>${repo.name}</h1>
+          <i class="fas fa-star">${repo.stargazers_count}</i>
+        </div>
+
+        <hr />
+      </div>
+
+      <div class="PS_body">
+        <p><br>${projects[repo.name].description}</p>
+
+        <div class="PSB_image">
+          <img src="${projects[repo.name].image}" />
+        </div>
+      </div>
+    </div>`;
     }
   });
-
-
-
 })();
