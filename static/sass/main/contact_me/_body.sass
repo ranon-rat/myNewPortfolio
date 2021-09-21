@@ -1,0 +1,94 @@
+.contact_body
+  display: grid
+  grid-area: contact_body
+  grid-template-areas: "contact_form"
+  grid-template-columns: 100%
+  grid-template-rows: auto
+  margin: 20px
+
+  .contact_form
+    display: grid
+    grid-area: contact_form
+    grid-template-areas: "contact_email" "contact_subject" "contact_text" "contact_submit"
+    grid-template-columns: 100%
+    grid-template-rows: 30px 30px auto 30px
+    grid-row-gap: 10px
+
+    input, textarea
+      background-color: $primary_background
+      border: 1px solid #666
+      border-radius: 5px
+
+    input:focus
+      outline: none
+      border: 2px solid #aaa
+
+    .contact_email
+      display: grid
+      grid-area: contact_email
+      grid-template-areas: "CE_I CE_Input"
+      grid-template-columns: 45px 90%
+      grid-template-rows: 30px
+      justify-content: center
+      align-self: center
+      column-gap: 10px
+
+      i
+        text-align: center
+        grid-area: CE_I
+
+      input
+        grid-area: CE_Input
+
+    .contact_subject
+      display: grid
+      grid-area: contact_subject
+      grid-template-areas: "CS_I CS_Input"
+      grid-template-columns: 45px 90%
+      grid-template-rows: 30px
+      justify-content: center
+      align-self: center
+      column-gap: 10px
+
+      i
+        text-align: center
+        grid-area: CS_I
+
+      input
+        grid-area: CS_Input
+
+    .contact_text
+      display: grid
+      grid-area: contact_text
+      grid-template-areas: "CT_I CT_Input"
+      grid-template-columns: 45px 90%
+      grid-template-rows: auto
+      justify-content: center
+      align-self: center
+      column-gap: 10px
+
+      i
+        text-align: center
+        grid-area: CT_I
+
+      textarea
+        min-height: 100px
+        grid-area: CT_Input
+        resize: vertical
+
+    .contact_submit
+      display: grid
+      grid-area: contact_submit
+      grid-template-areas: "CB_I CB_Input"
+      grid-template-columns: 45px 90%
+      grid-template-rows: auto
+      justify-content: center
+      align-self: center
+      column-gap: 10px
+
+      i
+        text-align: center
+        grid-area: CB_I
+
+      input
+        grid-area: CB_Input

@@ -1,0 +1,18 @@
+.navigation_bar
+  display: grid
+  grid-area: navigation_bar
+  background: $secondary_background
+  grid-template-areas: "nav_bar_areas" "nav_bar_pages"
+  grid-template-columns: 100%
+  grid-template-rows: 50% 50%
+  justify-content: center
+  align-items: center
+
+  @import "areas.sass"
+  @import "pages.sass"
+
+.sticky
+  position: fixed
+  top: 0
+  width: 45px
+  height: 100vh

@@ -1,0 +1,27 @@
+@import "defaults.sass"
+@import "vars.sass"
+
+.grid_container
+  display: grid
+  grid-template-areas: "navigation_bar container"
+  grid-template-columns: 45px auto
+  grid-template-rows: auto
+  background: $primary_background
+
+  @import "navigation_bar/main.sass"
+
+  // Container
+  .container
+    display: grid
+    grid-area: container
+    background: $primary_background
+    grid-template-areas: "header" "main" "footer"
+    grid-template-columns: 100%
+    grid-template-rows: 100vh auto 45px
+    
+    @import "header/main.sass"
+    @import "main/main.sass"
+    @import "footer/main.sass"
+
+
+@import "animations.sass"

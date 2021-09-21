@@ -67,6 +67,6 @@ setInterval(async () => {
       i.connect.bind(i, ctx, particles.concat([mouse] as classes.particles[]))
     );
   });
-  ctx.fillStyle = "#1d1d1d";
+  ctx.fillStyle = "#121212";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }, 10);

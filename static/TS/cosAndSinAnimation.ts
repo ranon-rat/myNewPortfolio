@@ -35,6 +35,6 @@ setInterval(async () => {
   ctx.restore();
   
  
-  ctx.fillStyle = "#1d1d1d";
+  ctx.fillStyle = "#121212";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }, 10);
