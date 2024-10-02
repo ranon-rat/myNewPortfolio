@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/ranon-rat/portofolio/types"
@@ -48,8 +49,7 @@ func webHookRequest(email, subject, message string) {
 		}})
 
 	responseBody := bytes.NewBuffer(params)
-
-	_, err := http.Post(types.Webhook, "application/json", responseBody)
+	_, err := http.Post(os.Getenv("webhook"), "application/json", responseBody)
 	if err != nil {
 		log.Println(err)
 	}
