@@ -1,0 +1,401 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #DDD;
+  font-family: cursive;
+}
+* ::-webkit-scrollbar {
+  width: 10px;
+}
+* ::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+* ::-webkit-scrollbar-thumb {
+  background: #161616;
+}
+* ::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-areas: "navigation_bar container";
+  grid-template-columns: 45px auto;
+  grid-template-rows: auto;
+  background: #121212;
+}
+.grid_container .navigation_bar {
+  display: grid;
+  grid-area: navigation_bar;
+  background: #101010;
+  grid-template-areas: "nav_bar_areas" "nav_bar_pages";
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  justify-content: center;
+  align-items: center;
+}
+.grid_container .navigation_bar .nav_bar_areas {
+  display: grid;
+  grid-area: nav_bar_areas;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 45px);
+  text-align: center;
+}
+.grid_container .navigation_bar .nav_bar_pages {
+  display: grid;
+  grid-area: nav_bar_pages;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 45px);
+  text-align: center;
+}
+.grid_container .sticky {
+  position: fixed;
+  top: 0;
+  width: 45px;
+  height: 100vh;
+}
+.grid_container .container {
+  display: grid;
+  grid-area: container;
+  background: #121212;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh auto 45px;
+}
+.grid_container .container header {
+  grid-area: header;
+  margin: 40px;
+}
+.grid_container .container header #title {
+  animation-name: Welcome;
+  animation-duration: 6s;
+  width: 100%;
+  height: 100%;
+}
+.grid_container .container main {
+  padding-top: 50px;
+  display: grid;
+  grid-area: main;
+  grid-template-areas: "about_me" "skills" "projects" "contact_me";
+  grid-auto-columns: 100%;
+  grid-auto-rows: auto;
+}
+.grid_container .container main .about_me {
+  display: grid;
+  grid-area: about_me;
+  grid-template-areas: "about_me_title" "about_me_body";
+  grid-template-columns: 80%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+.grid_container .container main .about_me .about_me_title {
+  grid-area: about_me_title;
+  text-align: center;
+}
+.grid_container .container main .about_me hr {
+  background-image: linear-gradient(90deg, transparent, #ccc, transparent);
+  border: none;
+  height: 1px;
+}
+.grid_container .container main .about_me .about_me_body {
+  display: grid;
+  grid-area: about_me_body;
+  grid-template-areas: "AMB_content AMB_canvas";
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  margin: 20px;
+}
+.grid_container .container main .about_me .about_me_body .AMB_content {
+  grid-area: AMB_content;
+}
+.grid_container .container main .about_me .about_me_body .AMB_content p {
+  font-size: 20px;
+}
+.grid_container .container main .about_me .about_me_body .AMB_canvas {
+  grid-area: AMB_canvas;
+}
+.grid_container .container main .about_me .about_me_body .AMB_canvas canvas {
+  max-width: 100%;
+  max-height: 60%;
+}
+@media screen and (max-width: 750px) {
+  .grid_container .container main .about_me .about_me_body {
+    display: grid;
+    grid-area: about_me_body;
+    grid-template-areas: "AMB_content" "AMB_canvas";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    margin: 20px;
+  }
+  .grid_container .container main .about_me .about_me_body .AMB_canvas {
+    align-self: center;
+  }
+  .grid_container .container main .about_me .about_me_body .AMB_canvas canvas {
+    align-self: center;
+  }
+}
+.grid_container .container main .skills {
+  display: grid;
+  grid-area: skills;
+  grid-template-areas: "skills_title" "skills_body";
+  grid-template-columns: 80%;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-items: center;
+}
+.grid_container .container main .skills .skills_title {
+  grid-area: skills_title;
+  text-align: center;
+}
+.grid_container .container main .skills hr {
+  background-image: linear-gradient(90deg, transparent, #ccc, transparent);
+  border: none;
+  height: 1px;
+}
+.grid_container .container main .skills .skills_body {
+  display: grid;
+  grid-area: skills_body;
+  grid-template-areas: "skills_body_canvas";
+  grid-template-columns: 100%;
+  grid-template-rows: 80vh;
+  margin: 20px;
+}
+.grid_container .container main .skills .skills_body .skills_body_canvas {
+  grid-area: skills_body_canvas;
+}
+.grid_container .container main .skills .skills_body .skills_body_canvas canvas {
+  width: 100%;
+  height: 100%;
+}
+.grid_container .container main .projects {
+  display: grid;
+  grid-area: projects;
+  grid-template-areas: "projects_header" "projects_body";
+  grid-template-columns: 80%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+.grid_container .container main .projects .projects_header {
+  grid-area: projects_header;
+  text-align: center;
+}
+.grid_container .container main .projects hr {
+  background-image: linear-gradient(90deg, transparent, #ccc, transparent);
+  border: none;
+  height: 1px;
+}
+.grid_container .container main .projects .projects_body {
+  display: grid;
+  grid-area: projects_body;
+  grid-template-areas: "projects_container";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  margin: 20px;
+}
+.grid_container .container main .projects .projects_body .projects_container {
+  display: grid;
+  grid-area: projects_container;
+  grid-template-columns: 35% 35%;
+  grid-template-rows: auto;
+  justify-content: center;
+  column-gap: 100px;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure:hover {
+  border: solid #666 1px;
+  border-radius: 15px;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure {
+  margin-top: 20px;
+  grid-template-areas: "PS_header" "PS_body";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  padding: 5px;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_header {
+  display: grid;
+  grid-area: PS_header;
+  grid-template-areas: "PS_head" "PS_line";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_header .PS_head {
+  display: grid;
+  grid-area: PS_head;
+  grid-template-areas: "PSH_title PSH_star";
+  grid-template-columns: auto 45px;
+  grid-template-rows: auto;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_header .PS_head h2 {
+  grid-area: PSH_title;
+  word-break: break-all;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_header .PS_head i {
+  grid-area: PSH_star;
+  align-self: center;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_header hr {
+  grid-area: PS_line;
+  height: 1px;
+  background-image: linear-gradient(90deg, transparent, #0B5AA2, transparent);
+  border: none;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_body {
+  display: grid;
+  grid-area: PS_body;
+  grid-template-areas: "PSB_text" "PSB_image";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_body p {
+  grid-area: PSB_text;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_body .PSB_image {
+  margin: 20px;
+  grid-area: PSB_image;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 50%;
+  min-height: 50%;
+}
+.grid_container .container main .projects .projects_body .projects_container .project_structure .PS_body .PSB_image img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 900px) {
+  .grid_container .container main .projects .projects_body .projects_container {
+    grid-template-columns: 100%;
+  }
+}
+.grid_container .container main .contact_me {
+  display: grid;
+  grid-area: contact_me;
+  grid-template-areas: "contact_title" "contact_body";
+  grid-template-columns: 80%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+.grid_container .container main .contact_me .contact_title {
+  grid-area: contact_title;
+  text-align: center;
+}
+.grid_container .container main .contact_me hr {
+  background-image: linear-gradient(90deg, transparent, #ccc, transparent);
+  border: none;
+  height: 1px;
+}
+.grid_container .container main .contact_me .contact_body {
+  display: grid;
+  grid-area: contact_body;
+  grid-template-areas: "contact_form";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  margin: 20px;
+}
+.grid_container .container main .contact_me .contact_body .contact_form {
+  display: grid;
+  grid-area: contact_form;
+  grid-template-areas: "contact_email" "contact_subject" "contact_text" "contact_submit";
+  grid-template-columns: 100%;
+  grid-template-rows: 30px 30px auto 30px;
+  grid-row-gap: 10px;
+}
+.grid_container .container main .contact_me .contact_body .contact_form input, .grid_container .container main .contact_me .contact_body .contact_form textarea {
+  background-color: #121212;
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+.grid_container .container main .contact_me .contact_body .contact_form input:focus {
+  outline: none;
+  border: 2px solid #aaa;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_email {
+  display: grid;
+  grid-area: contact_email;
+  grid-template-areas: "CE_I CE_Input";
+  grid-template-columns: 45px 90%;
+  grid-template-rows: 30px;
+  justify-content: center;
+  align-self: center;
+  column-gap: 10px;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_email i {
+  text-align: center;
+  grid-area: CE_I;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_email input {
+  grid-area: CE_Input;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_subject {
+  display: grid;
+  grid-area: contact_subject;
+  grid-template-areas: "CS_I CS_Input";
+  grid-template-columns: 45px 90%;
+  grid-template-rows: 30px;
+  justify-content: center;
+  align-self: center;
+  column-gap: 10px;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_subject i {
+  text-align: center;
+  grid-area: CS_I;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_subject input {
+  grid-area: CS_Input;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_text {
+  display: grid;
+  grid-area: contact_text;
+  grid-template-areas: "CT_I CT_Input";
+  grid-template-columns: 45px 90%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-self: center;
+  column-gap: 10px;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_text i {
+  text-align: center;
+  grid-area: CT_I;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_text textarea {
+  min-height: 100px;
+  grid-area: CT_Input;
+  resize: vertical;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_submit {
+  display: grid;
+  grid-area: contact_submit;
+  grid-template-areas: "CB_I CB_Input";
+  grid-template-columns: 45px 90%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-self: center;
+  column-gap: 10px;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_submit i {
+  text-align: center;
+  grid-area: CB_I;
+}
+.grid_container .container main .contact_me .contact_body .contact_form .contact_submit input {
+  grid-area: CB_Input;
+}
+.grid_container .container footer {
+  grid-area: footer;
+  align-self: center;
+  text-align: center;
+}
+
+@keyframes Welcome {
+  0%, 15% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
