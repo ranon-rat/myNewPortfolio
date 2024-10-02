@@ -37,16 +37,14 @@ const thecnologies = [
   "plug",
   "linux",
   "sfml",
-  "macos",
   "fastapi",
-  "discord.js",
-  "discord.py",
-  "discordgo",
-  "html",
-  "markdown",
-  "visual studio code",
   "vim",
   "neovim",
+  "haskell",
+  "libp2p",
+  "webrtc",
+  "pion",
+
 ];
 var mouse = { x: 0, y: 0 };
 let particles: classes.particles[] = [];

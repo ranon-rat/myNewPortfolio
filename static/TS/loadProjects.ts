@@ -10,6 +10,7 @@ const projectsNames = [
   "brainfuck cool hello world",
   "neural-network-in-cpp",
   "blog in go",
+
 ];
 
 var projects: Record<string, classes.project> = {
@@ -80,12 +81,12 @@ var projects: Record<string, classes.project> = {
 
   repos.forEach((repo: any) => {
     console.log(repo.name)
-    
+
     if (projects.hasOwnProperty(repo.name)) {
       projects[repo.name].stars = repo.stargazers_count;
 
       projectElement.innerHTML +=
-      `<div class="project_structure">
+        `<div class="project_structure">
       <div class="PS_header">
         <div class="PS_head">
           <h2>${repo.name}</h1>
