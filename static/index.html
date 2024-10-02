@@ -1,157 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ranon-Rat Portfolio</title>
 
-    <!-- Font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranon-Rat Portfolio</title>
 
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <div class="grid_container">
-      <nav class="navigation_bar sticky" id="navigation_bar">
-        <div class="nav_bar_areas">
-          <a href="#title"><i class="fas fa-home fa-lg"></i></a>
-          <a href="#about_me"><i class="fas fa-question fa-lg"></i></a>
-          <a href="#projects"><i class="fas fa-project-diagram fa-lg"></i></a>
-          <a href="#contact_me"><i class="fas fa-address-card fa-lg"></i></a>
-        </div>
-        <div class="nav_bar_pages">
-          <a href="https://discord.gg/e52RFh7Cg2"
-            ><i class="fab fa-discord fa-lg"></i
-          ></a>
-          <a href="https://github.com/ranon-rat"
-            ><i class="fab fa-github fa-lg"></i
-          ></a>
-          <a href="https://www.instagram.com/ranon_rat/"
-            ><i class="fab fa-instagram fa-lg"></i
-          ></a>
-          <a href="https://twitter.com/ranon_rat"
-            ><i class="fab fa-twitter fa-lg"></i
-          ></a>
-        </div>
-      </nav>
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <div class="container">
-        <header>
-          <canvas id="title"></canvas>
-        </header>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
 
-        <main>
-          <div class="about_me" id="about_me">
-            <div class="about_me_title">
-              <h1>About me</h1>
-              <hr />
-            </div>
-
-            <div class="about_me_body">
-              <div class="AMB_content">
-                <p>
-                  I am a 16 years old programmer , I really love coding and Im
-                  one of the founders of
-                  <a href="https://github.com/bruh-boys">bruh boys</a>.
-                  <br /><br />
-                  I have a lot of experience with go and typescript but I can
-                  work with other languages like python,haskell,rust,c++ and
-                  elixir.
-                  <br /><br />
-                  And currently im working in a new project called
-                  <a href="https://github.com/bruh-boys/anonpost">anonpost</a>.
-                </p>
-              </div>
-
-              <div class="AMB_canvas">
-                <canvas
-                  id="cos-sin-animation"
-                  class="animations-post"
-                  width="400"
-                  height="300"
-                ></canvas>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills">
-            <div class="skills_title">
-              <h1>I know</h1>
-              <hr />
-            </div>
-
-            <div class="skills_body">
-              <div class="skills_body_canvas">
-                <canvas
-                  id="thecnologies"
-                  style="width: 100%; height: 200"
-                  height="200"
-                ></canvas>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects" id="projects">
-            <div class="projects_header">
-              <h1>Projects</h1>
-              <hr />
-            </div>
-
-            <div class="projects_body">
-              <div class="projects_container" id="projects_container">
-              </div>
-            </div>
-          </div>
-
-          <div class="contact_me" id="contact_me">
-            <div class="contact_title">
-              <h1>Contact me</h1>
-              <hr />
-            </div>
-
-            <div class="contact_body">
-              <form action="/contact" method="POST" id="contact-form" class="contact_form">
-                <div class="contact_email">
-                  <i class="fas fa-envelope fa-2x"></i>
-                  <input type="email" name="email" placeholder="email" required>
-                </div>
-
-                <div class="contact_subject">
-                  <i class="fas fa-user fa-2x"></i>
-                  <input type="text" name="subject" placeholder="subject" required>
-                </div>
-                
-                <div class="contact_text">
-                  <i class="fas fa-comment fa-2x"></i>
-                  <textarea name="message" placeholder="message" required></textarea>
-                </div>
-
-                <div class="contact_submit">
-                  <i class="fab fa-telegram-plane fa-2x"></i>
-                  <input type="submit" value="send">
-                </div>
-              </form>
-            </div>
-          </div>
-        </main>
-
-        <footer>
-          &copy; ranon-rat 2021
-        </footer>
+<body>
+  <div class="grid_container">
+    <nav class="navigation_bar sticky" id="navigation_bar">
+      <div class="nav_bar_areas">
+        <a href="#title"><i class="fas fa-home fa-lg"></i></a>
+        <a href="#about_me"><i class="fas fa-question fa-lg"></i></a>
+        <a href="#projects"><i class="fas fa-project-diagram fa-lg"></i></a>
+        <a href="#contact_me"><i class="fas fa-address-card fa-lg"></i></a>
       </div>
-    </div>
+      <div class="nav_bar_pages">
+        <a href="https://discord.gg/e52RFh7Cg2"><i class="fab fa-discord fa-lg"></i></a>
+        <a href="https://github.com/ranon-rat"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://www.instagram.com/ranon_rat/"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://twitter.com/ranon_rat"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+    </nav>
 
-    <script src="JS/navigation_bar.js" type="module"></script>
-    <script src="JS/canvasAnimation.js" type="module"></script>
-    <script src="JS/cosAndSinAnimation.js" type="module"></script>
-    <script src="JS/thecnologiesAnimation.js" type="module"></script>
-    <script src="JS/loadProjects.js" type="module"></script>
-  </body>
+    <div class="container">
+      <header>
+        <canvas id="title"></canvas>
+      </header>
+
+      <main>
+        <div class="about_me" id="about_me">
+          <div class="about_me_title">
+            <h1>About me</h1>
+            <hr />
+          </div>
+
+          <div class="about_me_body">
+            <div class="AMB_content">
+              <p>
+                I am a <span id="edad"></span> years old programmer , I really love coding and Im
+                one of the founders of
+                <a href="https://github.com/bruh-boys">bruh boys</a>.
+                <br /><br />
+                I have a lot of experience with go and typescript but I can
+                work with other languages like python,haskell,rust,c++ and
+                elixir.
+                <br /><br />
+                And currently im working in a new project called
+                <a href="https://github.com/bruh-boys/anonpost">anonpost</a>.
+              </p>
+            </div>
+            <script>
+              function differenceYears(birth, today) {
+                let diff = today.getFullYear() - antes.getFullYear();
+
+                // this is just for verifying that the month of birth has passed
+                const monthNow = today.getMonth();
+                const dayNow = today.getDate();
+                const monthBirth = birth.getMonth();
+                const dayBirth = birth.getDate();
+
+                // if the birth hasnt passed we just substract 1
+                if (monthNow < monthBirth || (monthNow === monthBirth && dayNow < dayBirth)) {
+                  diff--;
+                }
+
+                return diff;
+              }
+
+              document.getElementById("edad").innerText = differenceYears(new Date('2005-06-22'), new Date())
+            </script>
+
+            <div class="AMB_canvas">
+              <canvas id="cos-sin-animation" class="animations-post" width="400" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills">
+          <div class="skills_title">
+            <h1>I know</h1>
+            <hr />
+          </div>
+
+          <div class="skills_body">
+            <div class="skills_body_canvas">
+              <canvas id="thecnologies" style="width: 100%; height: 200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects" id="projects">
+          <div class="projects_header">
+            <h1>Projects</h1>
+            <hr />
+          </div>
+
+          <div class="projects_body">
+            <div class="projects_container" id="projects_container">
+            </div>
+          </div>
+        </div>
+
+        <div class="contact_me" id="contact_me">
+          <div class="contact_title">
+            <h1>Contact me</h1>
+            <hr />
+          </div>
+
+          <div class="contact_body">
+            <form action="/contact" method="POST" id="contact-form" class="contact_form">
+              <div class="contact_email">
+                <i class="fas fa-envelope fa-2x"></i>
+                <input type="email" name="email" placeholder="email" required>
+              </div>
+
+              <div class="contact_subject">
+                <i class="fas fa-user fa-2x"></i>
+                <input type="text" name="subject" placeholder="subject" required>
+              </div>
+
+              <div class="contact_text">
+                <i class="fas fa-comment fa-2x"></i>
+                <textarea name="message" placeholder="message" required></textarea>
+              </div>
+
+              <div class="contact_submit">
+                <i class="fab fa-telegram-plane fa-2x"></i>
+                <input type="submit" value="send">
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        &copy; ranon-rat 2021
+      </footer>
+    </div>
+  </div>
+
+  <script src="JS/navigation_bar.js" type="module"></script>
+  <script src="JS/canvasAnimation.js" type="module"></script>
+  <script src="JS/cosAndSinAnimation.js" type="module"></script>
+  <script src="JS/thecnologiesAnimation.js" type="module"></script>
+  <script src="JS/loadProjects.js" type="module"></script>
+</body>
+
 </html>
